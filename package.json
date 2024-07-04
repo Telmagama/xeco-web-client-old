@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node dist/xeco-web/server/main.js",
     "build:dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "dev:ssr": "ng run xeco-web:serve-ssr",
