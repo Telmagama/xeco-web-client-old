@@ -1,0 +1,285 @@
+<div class="pricing14-pricing23 thq-section-padding">
+  <div class="pricing14-max-width thq-section-max-width">
+    <div class="pricing14-section-title">
+      <span class="pricing14-text thq-body-small">{{ content1 }}</span>
+      <div class="pricing14-content">
+        <h2 class="pricing14-text01 thq-heading-2">{{ heading1 }}</h2>
+        <p class="pricing14-text02 thq-body-large">{{ content2 }}</p>
+      </div>
+    </div>
+    <div class="pricing14-tabs">
+      <button
+        (click)="isMonthly = true"
+        *ngIf="isMonthly"
+        class="pricing14-button thq-button-animated thq-button-filled"
+      >
+        <span class="thq-body-small">Monthly</span>
+      </button>
+      <button
+        (click)="isMonthly = true"
+        *ngIf="!isMonthly"
+        class="pricing14-button01 thq-button-outline thq-button-animated"
+      >
+        <span class="thq-body-small">Monthly</span>
+      </button>
+      <button
+        (click)="isMonthly = false"
+        *ngIf="!isMonthly"
+        class="pricing14-button02 thq-button-animated thq-button-filled"
+      >
+        <span class="thq-body-small">Yearly</span>
+      </button>
+      <button
+        (click)="isMonthly = false"
+        *ngIf="isMonthly"
+        class="pricing14-button03 thq-button-outline thq-button-animated"
+      >
+        <span class="thq-body-small">Yearly</span>
+      </button>
+    </div>
+    <div *ngIf="isMonthly" class="pricing14-container">
+      <div class="pricing14-column thq-card">
+        <div class="pricing14-price">
+          <div class="pricing14-price01">
+            <p class="pricing14-text07 thq-body-large">{{ plan1 }}</p>
+            <h3 class="pricing14-text08 thq-heading-3">{{ plan1Price }}</h3>
+            <p class="thq-body-large">{{ plan1Yearly }}</p>
+          </div>
+          <div class="pricing14-list">
+            <div class="pricing14-list-item">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan1Feature1 }}</span>
+            </div>
+            <div class="pricing14-list-item01">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan1Feature2 }}</span>
+            </div>
+            <div class="pricing14-list-item02">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan1Feature3 }}</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="pricing14-button04 thq-button-outline thq-button-animated"
+        >
+          <span class="thq-body-small">{{ plan1Action }}</span>
+        </button>
+      </div>
+      <div class="pricing14-column1 thq-card">
+        <div class="pricing14-price02">
+          <div class="pricing14-price03">
+            <p class="pricing14-text14 thq-body-large">{{ plan2 }}</p>
+            <h3 class="pricing14-text15 thq-heading-3">{{ plan2Price }}</h3>
+            <p class="thq-body-large">{{ plan2Yearly }}</p>
+          </div>
+          <div class="pricing14-list1">
+            <div class="pricing14-list-item03">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature1 }}</span>
+            </div>
+            <div class="pricing14-list-item04">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature2 }}</span>
+            </div>
+            <div class="pricing14-list-item05">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature3 }}</span>
+            </div>
+            <div class="pricing14-list-item06">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature4 }}</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="pricing14-button05 thq-button-animated thq-button-filled"
+        >
+          <span class="thq-body-small">{{ plan2Action }}</span>
+        </button>
+      </div>
+      <div class="pricing14-column2 thq-card">
+        <div class="pricing14-price04">
+          <div class="pricing14-price05">
+            <p class="pricing14-text22 thq-body-large">{{ plan3 }}</p>
+            <h3 class="pricing14-text23 thq-heading-3">{{ plan3Price }}</h3>
+            <p class="thq-body-large">{{ plan3Yearly }}</p>
+          </div>
+          <div class="pricing14-list2">
+            <div class="pricing14-list-item07">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature1 }}</span>
+            </div>
+            <div class="pricing14-list-item08">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature2 }}</span>
+            </div>
+            <div class="pricing14-list-item09">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature3 }}</span>
+            </div>
+            <div class="pricing14-list-item10">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature4 }}</span>
+            </div>
+            <div class="pricing14-list-item11">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature5 }}</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="pricing14-button06 thq-button-animated thq-button-filled"
+        >
+          <span class="thq-body-small">{{ plan3Action }}</span>
+        </button>
+      </div>
+    </div>
+    <div *ngIf="!isMonthly" class="pricing14-container1">
+      <div class="pricing14-column3 thq-card">
+        <div class="pricing14-price06">
+          <div class="pricing14-price07">
+            <span class="pricing14-text31 thq-body-large">{{ plan11 }}</span>
+            <h3 class="pricing14-text32 thq-heading-3">{{ plan1Price1 }}</h3>
+            <span class="thq-body-large">{{ plan1Yearly1 }}</span>
+          </div>
+          <div class="pricing14-list3">
+            <div class="pricing14-list-item12">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan1Feature11 }}</span>
+            </div>
+            <div class="pricing14-list-item13">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan1Feature21 }}</span>
+            </div>
+            <div class="pricing14-list-item14">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan1Feature31 }}</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="pricing14-button07 thq-button-outline thq-button-animated"
+        >
+          <span class="thq-body-small">{{ plan1Action1 }}</span>
+        </button>
+      </div>
+      <div class="pricing14-column4 thq-card">
+        <div class="pricing14-price08">
+          <div class="pricing14-price09">
+            <span class="pricing14-text38 thq-body-large">{{ plan21 }}</span>
+            <h3 class="pricing14-text39 thq-heading-3">{{ plan2Price1 }}</h3>
+            <span class="thq-body-large">{{ plan2Yearly1 }}</span>
+          </div>
+          <div class="pricing14-list4">
+            <div class="pricing14-list-item15">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature11 }}</span>
+            </div>
+            <div class="pricing14-list-item16">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature21 }}</span>
+            </div>
+            <div class="pricing14-list-item17">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature31 }}</span>
+            </div>
+            <div class="pricing14-list-item18">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan2Feature41 }}</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="pricing14-button08 thq-button-animated thq-button-filled"
+        >
+          <span class="thq-body-small">{{ plan2Action1 }}</span>
+        </button>
+      </div>
+      <div class="pricing14-column5 thq-card">
+        <div class="pricing14-price10">
+          <div class="pricing14-price11">
+            <span class="pricing14-text46 thq-body-large">{{ plan31 }}</span>
+            <h3 class="pricing14-text47 thq-heading-3">{{ plan3Price1 }}</h3>
+            <span class="thq-body-large">{{ plan3Yearly1 }}</span>
+          </div>
+          <div class="pricing14-list5">
+            <div class="pricing14-list-item19">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature11 }}</span>
+            </div>
+            <div class="pricing14-list-item20">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature21 }}</span>
+            </div>
+            <div class="pricing14-list-item21">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature31 }}</span>
+            </div>
+            <div class="pricing14-list-item22">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature41 }}</span>
+            </div>
+            <div class="pricing14-list-item23">
+              <svg viewBox="0 0 1024 1024" class="thq-icon-small">
+                <path d="M384 690l452-452 60 60-512 512-238-238 60-60z"></path>
+              </svg>
+              <span class="thq-body-small">{{ plan3Feature51 }}</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="pricing14-button09 thq-button-animated thq-button-filled"
+        >
+          <span class="thq-body-small">{{ plan3Action1 }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

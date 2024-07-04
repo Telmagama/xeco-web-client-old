@@ -1,0 +1,195 @@
+:host { 
+  display: contents; 
+}
+.detalhe-empresa-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.detalhe-empresa-header {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-style: normal;
+  text-align: center;
+  font-family: Cormorant Infant;
+  font-weight: 700;
+  line-height: 60px;
+}
+.detalhe-empresa-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #352B2A;
+}
+.detalhe-empresa-content {
+  gap: 120px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  max-width: 1440px;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-fourunits);
+  padding-left: var(--dl-space-space-fiveunits);
+  padding-right: var(--dl-space-space-fiveunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-threeunits);
+}
+.detalhe-empresa-main {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.detalhe-empresa-branding {
+  gap: var(--dl-space-space-threeunits);
+  display: flex;
+  max-width: 400px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.detalhe-empresa-heading {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.detalhe-empresa-image {
+  flex: 1;
+  height: 33px;
+  object-fit: cover;
+}
+.detalhe-empresa-caption {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 21px;
+}
+.detalhe-empresa-links {
+  gap: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.detalhe-empresa-items {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.detalhe-empresa-link {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link01 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.detalhe-empresa-link02 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.detalhe-empresa-link03 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.detalhe-empresa-items1 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.detalhe-empresa-link04 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.detalhe-empresa-link05 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link06 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link07 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-items2 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.detalhe-empresa-link08 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link09 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link10 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link11 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-link12 {
+  color: rgb(255, 255, 255);
+}
+.detalhe-empresa-copyright {
+  color: #766968;
+  font-size: 12px;
+}
+@media(max-width: 1600px) {
+  .detalhe-empresa-header {
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+  }
+  .detalhe-empresa-footer {
+    background-color: #383737;
+  }
+  .detalhe-empresa-image {
+    width: 182px;
+    height: 75px;
+  }
+  .detalhe-empresa-caption {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .detalhe-empresa-copyright {
+    color: rgb(118, 105, 104);
+    font-size: 12px;
+  }
+}
+@media(max-width: 991px) {
+  .detalhe-empresa-content {
+    gap: var(--dl-space-space-threeunits);
+  }
+  .detalhe-empresa-main {
+    gap: var(--dl-space-space-threeunits);
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .detalhe-empresa-branding {
+    max-width: 80%;
+  }
+  .detalhe-empresa-heading {
+    gap: var(--dl-space-space-unit);
+  }
+  .detalhe-empresa-links {
+    gap: var(--dl-space-space-threeunits);
+    flex-direction: column;
+  }
+}
+@media(max-width: 767px) {
+  .detalhe-empresa-header {
+    font-size: 32px;
+    line-height: 31px;
+  }
+  .detalhe-empresa-content {
+    padding-left: var(--dl-space-space-oneandhalfunits);
+    padding-right: var(--dl-space-space-oneandhalfunits);
+  }
+  .detalhe-empresa-branding {
+    max-width: 70%;
+  }
+}

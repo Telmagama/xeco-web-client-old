@@ -1,0 +1,471 @@
+<div class="home-container">
+  <section class="home-hero">
+    <div class="home-main">
+      <div class="home-video">
+        <video
+          src
+          poster="/assets/Videos/hero-cover1-1500h.png"
+          class="home-video1"
+        ></video>
+        <div class="home-tint"></div>
+      </div>
+      <div class="home-content">
+        <header class="home-header">
+          <header data-thq="thq-navbar" class="home-navbar">
+            <img
+              alt="logo"
+              src="https://firebasestorage.googleapis.com/v0/b/explorecash-a6526.appspot.com/o/assets_web%2FXeco(1).svg?alt=media&amp;token=c0845173-511a-4ace-9c2d-a89d9a83ada2"
+              class="home-logo"
+            />
+            <div data-thq="thq-burger-menu" class="home-menu">
+              <div class="home-links">
+                <a href="#features" class="link">Marketplace</a>
+                <span class="link">Android</span>
+                <span class="link">IOs</span>
+                <span class="link">Minha franquia</span>
+              </div>
+              <button class="home-hamburger button">
+                <svg viewBox="0 0 1024 1024" class="home-icon">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div data-thq="thq-mobile-menu" class="home-mobile-menu">
+              <div
+                data-thq="thq-mobile-menu-nav"
+                data-role="Nav"
+                class="home-nav"
+              >
+                <div class="home-container1">
+                  <img alt="logo" src="/assets/logo.svg" class="home-logo1" />
+                  <div data-thq="thq-close-menu" class="home-menu-close">
+                    <svg viewBox="0 0 1024 1024" class="home-icon02">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav
+                  data-thq="thq-mobile-menu-nav-links"
+                  data-role="Nav"
+                  class="home-nav1"
+                >
+                  <span class="home-text03">About</span>
+                  <span class="home-text04">Features</span>
+                  <span class="home-text05">Pricing</span>
+                  <span class="home-text06">Team</span>
+                  <span class="home-text07">Blog</span>
+                </nav>
+                <div class="home-container2">
+                  <button class="home-login button">Login</button>
+                  <button class="button">Register</button>
+                </div>
+              </div>
+              <div class="home-icon-group">icone</div>
+            </div>
+          </header>
+        </header>
+        <div class="home-center">
+          <div class="home-heading">
+            <h1 class="home-header1">Bem vindo ao Xeco</h1>
+            <p class="home-caption">Tudo num só lugar</p>
+          </div>
+          <div class="home-border">
+            <div class="home-filter">
+              <img
+                alt="image"
+                src="/assets/Icons/location.svg"
+                class="home-image"
+              />
+              <div data-thq="thq-dropdown" class="home-dropdown list-item">
+                <div
+                  data-thq="thq-dropdown-toggle"
+                  class="home-dropdown-toggle"
+                >
+                  <select
+                    name="cars"
+                    id="cars"
+                    (change)="getAllCitiesByState($event.target.value)"
+                    [(ngModel)]="selectedState"
+                  >
+                    <option selected="selected">
+                      Em qual estado você está?
+                    </option>
+                    <option value="{{ e.code }}" *ngFor="let e of estados">
+                      {{ e.nome }}
+                    </option>
+                  </select>
+                  <select
+                    name="cidades"
+                    id="cidade"
+                    *ngIf="showCities"
+                    [(ngModel)]="selectedCity"
+                    (change)="getAllCompaniesByCityAndUfet()"
+                  >
+                    <option selected="selected">Selecione sua cidade</option>
+                    <option value="{{ c.nome }}" *ngFor="let c of cidades">
+                      {{ c.nome }}
+                    </option>
+                  </select>
+                </div>
+                <ul
+                  data-thq="thq-dropdown-list"
+                  class="home-dropdown-list"
+                ></ul>
+              </div>
+              <div class="home-search">
+                <img
+                  alt="image"
+                  src="/assets/Icons/search.svg"
+                  class="home-icon12"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="tours" class="home-quick-view">
+    <h1>As melhores empresas de {{ selectedCity }}</h1>
+    <div class="home-offers">
+      <a
+        routerLink="/franquia"
+        *ngFor="let p of companiesOfACity"
+        (click)="setCompanyinUse(p)"
+      >
+        <div class="home-offer-container1">
+          <app-offer
+            image="{{ p.logo }}"
+            guides="{{ p.neighborhood }}, {{ p.city }} - {{ p.state }}"
+            location="{{ p.name }}"
+            description="{{ p.slogan }}"
+          ></app-offer>
+        </div>
+      </a>
+    </div>
+  </section>
+  <div class="home-container3"></div>
+  <section id="find" class="home-find">
+    <div class="home-heading1">
+      <h2 class="home-header2">Crie sua franquia virtual!</h2>
+      <p class="home-caption1">
+        Comece agora mesmo a expandir os seus negócios com a melhor plataforma
+        de comercio local
+      </p>
+    </div>
+    <button class="home-find1 button">Criar minha franquia</button>
+  </section>
+  <div id="features" class="home-feaures">
+    <div class="home-content1">
+      <app-feature></app-feature>
+      <app-feature
+        icon="/assets/Icons/headset.svg"
+        header="24/7 Support"
+      ></app-feature>
+      <app-feature
+        icon="/assets/Icons/person.svg"
+        header="Private Tours"
+      ></app-feature>
+    </div>
+  </div>
+  <section class="home-faq">
+    <div id="faqs" class="home-content2">
+      <div class="home-heading2">
+        <h2 class="home-header3">Perguntas frequentes</h2>
+        <p class="home-caption2">
+          Lorem ipsum dolor sit consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt.
+        </p>
+      </div>
+      <div class="home-accordion">
+        <div data-role="accordion-container" class="accordion home-element">
+          <div class="home-content3">
+            <span class="home-header4">
+              Lorem ipsum dolor sit ametetur elit?
+            </span>
+            <span data-role="accordion-content" class="home-description">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </span>
+          </div>
+          <div class="home-icon-container">
+            <svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-closed"
+              class="home-icon17"
+            >
+              <path
+                d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path></svg
+            ><svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-open"
+              class="home-icon19"
+            >
+              <path
+                d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div data-role="accordion-container" class="home-element1 accordion">
+          <div class="home-content4">
+            <span class="home-header5">
+              Excepteur sint occaecat cupidatat non sunt in culpa qui officia
+              deserunt mollit anim id est laborum?
+            </span>
+            <span data-role="accordion-content" class="home-description1">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </span>
+          </div>
+          <div class="home-icon-container1">
+            <svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-closed"
+              class="home-icon21"
+            >
+              <path
+                d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path></svg
+            ><svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-open"
+              class="home-icon23"
+            >
+              <path
+                d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div data-role="accordion-container" class="home-element2 accordion">
+          <div class="home-content5">
+            <span class="home-header6">
+              Tempor incididunt ut labore et dolore magna aliquat enim ad minim?
+            </span>
+            <span data-role="accordion-content" class="home-description2">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </span>
+          </div>
+          <div class="home-icon-container2">
+            <svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-closed"
+              class="home-icon25"
+            >
+              <path
+                d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path></svg
+            ><svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-open"
+              class="home-icon27"
+            >
+              <path
+                d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div data-role="accordion-container" class="home-element3 accordion">
+          <div class="home-content6">
+            <span class="home-header7">
+              Lorem ipsum dolor sit ametetur elit?
+            </span>
+            <span data-role="accordion-content" class="home-description3">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </span>
+          </div>
+          <div class="home-icon-container3">
+            <svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-closed"
+              class="home-icon29"
+            >
+              <path
+                d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path></svg
+            ><svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-open"
+              class="home-icon31"
+            >
+              <path
+                d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div data-role="accordion-container" class="home-element4 accordion">
+          <div class="home-content7">
+            <span class="home-header8">Incididunt ut labore et dolore?</span>
+            <span data-role="accordion-content" class="home-description4">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </span>
+          </div>
+          <div class="home-icon-container4">
+            <svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-closed"
+              class="home-icon33"
+            >
+              <path
+                d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path></svg
+            ><svg
+              viewBox="0 0 1024 1024"
+              data-role="accordion-icon-open"
+              class="home-icon35"
+            >
+              <path
+                d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-footer">
+    <div class="home-content8">
+      <div class="home-main1">
+        <div class="home-branding">
+          <div class="home-heading3">
+            <img
+              alt="image"
+              src="https://firebasestorage.googleapis.com/v0/b/explorecash-a6526.appspot.com/o/assets_web%2FXeco(1).svg?alt=media&amp;token=c0845173-511a-4ace-9c2d-a89d9a83ada2"
+              class="home-image1"
+            />
+            <p class="home-caption3">Guia Comercial | Marketplace | Entregas</p>
+          </div>
+        </div>
+        <div class="home-links1">
+          <div class="home-items">
+            <button class="home-link01 button button-clean">
+              Find a guide
+            </button>
+            <button class="home-link02 button button-clean">Find a tour</button>
+            <button class="home-link03 button button-clean">
+              Visit a city
+            </button>
+            <button class="home-link04 button button-clean">
+              Visit a country
+            </button>
+          </div>
+          <div class="home-items1">
+            <button class="home-link05 button button-clean">
+              How it works
+            </button>
+            <button class="home-link06 button button-clean">
+              Cancelation policy
+            </button>
+            <button class="home-link07 button button-clean">
+              Local guides
+            </button>
+            <button class="home-link08 button button-clean">Affiliate</button>
+          </div>
+          <div class="home-items2">
+            <button class="home-link09 button button-clean">About us</button>
+            <button class="home-link10 button button-clean">Blog</button>
+            <button class="home-link11 button button-clean">Partners</button>
+            <button class="home-link12 button button-clean">Faqs</button>
+            <button class="home-link13 button button-clean">Careers</button>
+          </div>
+        </div>
+      </div>
+      <span class="home-copyright">© 2024 A&amp;S. All Rights Reserved.</span>
+    </div>
+  </section>
+  <div>
+    <div class="home-container5">
+      <dangerous-html
+        html="<script>
+  function initAccordion() {
+    /*
+    Accordion - Code Embed
+    */
+    const accordionContainers = document.querySelectorAll(
+      '[data-role='accordion-container']'
+    ); // All accordion containers
+    const accordionContents = document.querySelectorAll(
+      '[data-role='accordion-content']'
+    ); // All accordion content
+    const accordionIconsClosed = document.querySelectorAll(
+      '[data-role='accordion-icon-closed']'
+    ); // All accordion closed icons
+    const accordionIconsOpen = document.querySelectorAll(
+      '[data-role='accordion-icon-open']'
+    ); // All accordion open icons
+
+    accordionContents.forEach((accordionContent) => {
+      accordionContent.style.display = 'none'; //Hides all accordion contents
+    });
+
+    accordionIconsClosed.forEach((icon) => {
+      icon.style.display = 'flex';
+    });
+
+    accordionIconsOpen.forEach((icon) => {
+      icon.style.display = 'none';
+    });
+
+    accordionContainers.forEach((accordionContainer, index) => {
+      if (accordionContainer.classList.contains('initialised')) {
+        return;
+      }
+
+      accordionContainer.classList.add('initiased');
+
+      accordionContainer.addEventListener('click', () => {
+        if (accordionContents[index].style.display === 'flex') {
+          // If the accordion is already open, close it
+          accordionContents[index].style.display = 'none';
+          accordionIconsClosed[index].style.display = 'flex';
+          accordionIconsOpen[index].style.display = 'none';
+        } else {
+          // If the accordion is closed, open it
+          accordionContents.forEach((accordionContent) => {
+            accordionContent.style.display = 'none'; //Hides all accordion contents
+          });
+
+          accordionIconsClosed.forEach((accordionIcon) => {
+            accordionIcon.style.display = 'flex'; // Resets all icon transforms to 0deg (default)
+          });
+
+          accordionIconsOpen.forEach((accordionIcon) => {
+            accordionIcon.style.display = 'none';
+          });
+
+          accordionContents[index].style.display = 'flex'; // Shows accordion content
+          accordionIconsClosed[index].style.display = 'none'; // Rotates accordion icon 180deg
+          accordionIconsOpen[index].style.display = 'flex';
+        }
+      });
+    });
+  }
+
+  initAccordion();
+</script>
+"
+      ></dangerous-html>
+    </div>
+  </div>
+</div>

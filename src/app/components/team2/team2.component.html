@@ -1,0 +1,60 @@
+<!-- <div class="thq-section-padding">
+  <div class="team2-max-width thq-section-max-width">
+   
+    <div class="team2-content1">
+      <div class="team2-content2">
+        <div class="team2-row">
+          <div class="team2-card" *ngFor="let c of produtos">
+            <img
+              [attr.alt]="member1Alt"
+              [attr.src]="member1Src"
+              class="thq-img-ratio-1-1 team2-placeholder-image"
+            />
+            <div class="team2-content3">
+              <div class="team2-title">
+                <span class="team2-text02 thq-body-small">{{ member1 }}</span>
+                <span class="team2-text03 thq-body-small">
+                  {{ member1Job }}
+                </span>
+              </div>
+              <span class="team2-text04 thq-body-small">
+                {{ member1Content }}
+              </span>
+            </div>
+            <div class="team2-social-icons">
+              <button type="button" class="button team2-button">
+                {{ button }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section id="tours" class="home-quick-view">
+  <div class="team2-section-title">
+    <div class="team2-content">
+      <h2 class="team2-text01 thq-heading-2">{{ heading1 }}</h2>
+    </div>
+  </div>
+  <div class="home-offers">
+    <a
+      *ngFor="let p of produtos"
+      (click)="productDetail(p)"
+      style="cursor: pointer"
+    >
+      <div class="home-offer-container1">
+        <app-offer
+          image="{{ p.imagesUrl[0].stringValue }}"
+          guides="Disponível em {{ p.cidade }} - {{ p.uf }}"
+          location="   {{
+            p.name.length > 20 ? (p.name | slice : 0 : 20) + '...' : p.name
+          }}"
+          description="{{ p.salePrice | currency : 'R$ ' }}"
+        ></app-offer>
+      </div>
+    </a>
+  </div>
+</section>

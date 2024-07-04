@@ -1,0 +1,192 @@
+:host { 
+  display: contents; 
+}
+.produto-detalhe-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.produto-detalhe-header {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-style: normal;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 60px;
+}
+.produto-detalhe-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #352B2A;
+}
+.produto-detalhe-content {
+  gap: 120px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  max-width: 1440px;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-fourunits);
+  padding-left: var(--dl-space-space-fiveunits);
+  padding-right: var(--dl-space-space-fiveunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-threeunits);
+}
+.produto-detalhe-main {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.produto-detalhe-branding {
+  gap: var(--dl-space-space-threeunits);
+  display: flex;
+  max-width: 400px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.produto-detalhe-heading {
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.produto-detalhe-image {
+  flex: 1;
+  height: 33px;
+  object-fit: cover;
+}
+.produto-detalhe-caption {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 21px;
+}
+.produto-detalhe-links {
+  gap: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.produto-detalhe-items {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.produto-detalhe-link {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link01 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.produto-detalhe-link02 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.produto-detalhe-link03 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.produto-detalhe-items1 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.produto-detalhe-link04 {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.produto-detalhe-link05 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link06 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link07 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-items2 {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.produto-detalhe-link08 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link09 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link10 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link11 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-link12 {
+  color: rgb(255, 255, 255);
+}
+.produto-detalhe-copyright {
+  color: #766968;
+  font-size: 12px;
+}
+@media(max-width: 1600px) {
+  .produto-detalhe-header {
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+  }
+  .produto-detalhe-image {
+    width: 182px;
+    height: 75px;
+  }
+  .produto-detalhe-caption {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .produto-detalhe-copyright {
+    color: rgb(118, 105, 104);
+    font-size: 12px;
+  }
+}
+@media(max-width: 991px) {
+  .produto-detalhe-content {
+    gap: var(--dl-space-space-threeunits);
+  }
+  .produto-detalhe-main {
+    gap: var(--dl-space-space-threeunits);
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .produto-detalhe-branding {
+    max-width: 80%;
+  }
+  .produto-detalhe-heading {
+    gap: var(--dl-space-space-unit);
+  }
+  .produto-detalhe-links {
+    gap: var(--dl-space-space-threeunits);
+    flex-direction: column;
+  }
+}
+@media(max-width: 767px) {
+  .produto-detalhe-header {
+    font-size: 32px;
+    line-height: 31px;
+  }
+  .produto-detalhe-content {
+    padding-left: var(--dl-space-space-oneandhalfunits);
+    padding-right: var(--dl-space-space-oneandhalfunits);
+  }
+  .produto-detalhe-branding {
+    max-width: 70%;
+  }
+}
