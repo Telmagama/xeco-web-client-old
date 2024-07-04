@@ -24,6 +24,7 @@ export class ProdutoDetalhe implements OnInit {
       this.query = p.get("p");
     });
     this.getProductDetail();
+    this._cleanMeta();
     this._prepareMeta();
   }
 
@@ -115,5 +116,11 @@ export class ProdutoDetalhe implements OnInit {
         content: `Xeco - ${this.produto.name}`,
       },
     ]);
+  }
+
+  _cleanMeta() {
+    this.meta.removeTag("property='og:image'");
+    this.meta.removeTag("og:title'");
+    this.meta.removeTag("property='description'");
   }
 }

@@ -25,6 +25,7 @@ export class DetalheEmpresa implements OnInit {
       this.query = p.get("c");
     });
     this.getCompanyDetail();
+    this._cleanMeta();
     this._prepareMeta();
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -88,6 +89,12 @@ export class DetalheEmpresa implements OnInit {
       .catch((err) => {
         console.error(" erro ao consultar detalhe da franquia ", err);
       });
+  }
+
+  _cleanMeta() {
+    this.meta.removeTag("property='og:image'");
+    this.meta.removeTag("og:title'");
+    this.meta.removeTag("property='description'");
   }
 
   _prepareMeta() {
