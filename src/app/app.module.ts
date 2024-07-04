@@ -39,8 +39,10 @@ const routes = [
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes),
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    RouterModule.forRoot(routes, {
+    initialNavigation: 'enabledBlocking'
+}),
     ComponentsModule,
     HttpClientModule,
     FormsModule,
