@@ -8,7 +8,7 @@
     "build:dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "dev:ssr": "ng run xeco-web:serve-ssr",
-    "start": "node dist/xeco-web/server/main.js",
+    "server": "node dist/xeco-web/server/main.js",
     "build": "ng build && ng run xeco-web:server",
     "prerender": "ng run xeco-web:prerender"
   },
