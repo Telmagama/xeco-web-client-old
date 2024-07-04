@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Title, Meta } from "@angular/platform-browser";
 import { ActivatedRoute, Router } from "@angular/router";
 import { HomeService } from "src/app/home.service";
+import Swal from "sweetalert2";
 
 @Component({
   selector: "app-home",
@@ -38,6 +39,48 @@ export class Home implements OnInit {
     this.populaEstados();
     this.initSearch();
     this._prepareMetaShare();
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      console.log("is mobile", navigator.userAgent);
+    } else {
+      console.log("not is mobile", navigator.userAgent);
+      Swal.fire({
+        title: "Eiiii",
+        text: "Baixe nosso app no celular, é muito mais divertido e completo",
+        icon: "info",
+        showDenyButton: true,
+
+        confirmButtonText: "Android",
+        denyButtonText: `iOS`,
+        showCancelButton: false,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+
+        showClass: {
+          popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `,
+        },
+        hideClass: {
+          popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `,
+        },
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.open("http://android.com", "_blank").focus();
+        } else {
+          window.open("https://www.apple.com/br/app-store/", "_blank").focus();
+        }
+      });
+    }
   }
 
   populaEstados() {
@@ -223,5 +266,11 @@ export class Home implements OnInit {
   productDetail(item: any) {
     console.log("item ", item._id);
     this.router.navigate(["/franquia"], { queryParams: { c: item._id } });
+  }
+
+  mostrar: boolean = false;
+
+  toggle() {
+    this.mostrar = !this.mostrar;
   }
 }

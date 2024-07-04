@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-
+import Swal from "sweetalert2";
 @Component({
   selector: "app-features24",
   templateUrl: "features24.component.html",
@@ -38,4 +38,48 @@ export class Features24 {
   feature2Title: string = "Guia Comercial";
   activeTab: number = 0;
   constructor() {}
+  _downloadApp() {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      console.log("is mobile", navigator.userAgent);
+    } else {
+      console.log("not is mobile", navigator.userAgent);
+      Swal.fire({
+        title: "Eiiii",
+        text: "Baixe nosso app e faça suas compras",
+        icon: "info",
+        showDenyButton: true,
+
+        confirmButtonText: "Android",
+        denyButtonText: `iOS`,
+        showCancelButton: false,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+
+        showClass: {
+          popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `,
+        },
+        hideClass: {
+          popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `,
+        },
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.open("http://android.com", "_blank").focus();
+        } else {
+          window.open("https://www.apple.com/br/app-store/", "_blank").focus();
+        }
+      });
+    }
+  }
 }
