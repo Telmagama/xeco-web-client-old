@@ -91,30 +91,28 @@ export class DetalheEmpresa implements OnInit {
   }
 
   _prepareMeta() {
-    setTimeout(() => {
-      this.title.setTitle(`Xeco - ${this.company.name}`);
-      this.meta.addTags([
-        {
-          property: "og:title",
-          content: `Xeco - ${this.company.name}`,
-        },
-        {
-          content: `${this.company.logo}`,
-          property: "og:image",
-        },
-        {
-          content: `${this.company.about}`,
-          property: "description",
-        },
-        {
-          content: `xeco, guia, comercial, marketplace, negocios`,
-          property: "keywords",
-        },
-        {
-          content: `Guaracy de Araújo Lima`,
-          property: "author",
-        },
-      ]);
-    }, 900);
+    this.title.setTitle(`Xeco - ${this.company.name}`);
+    this.meta.addTags([
+      {
+        property: "og:title",
+        content: `Xeco - ${this.company.name}`,
+      },
+      {
+        content: `${this.company.logo}`,
+        property: "og:image",
+      },
+      {
+        content: `${this.company.about}`,
+        property: "description",
+      },
+      {
+        content: `xeco, guia, comercial, marketplace, negocios`,
+        property: "keywords",
+      },
+      {
+        content: `Guaracy de Araújo Lima`,
+        property: "author",
+      },
+    ]);
   }
 }
