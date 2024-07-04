@@ -31,7 +31,17 @@ export class Home implements OnInit {
     this.meta.addTags([
       {
         property: "og:title",
-        content: "Xeco",
+        content: "Xeco - comercio local",
+      },
+      {
+        name: "description",
+        content: `Confira as melhores empresas da sua região, pontos turisticos, orgãos publicos e muito mais \n Encontre no Xeco agora!`,
+        property: "og:description",
+      },
+
+      {
+        content: `https://firebasestorage.googleapis.com/v0/b/explorecash-a6526.appspot.com/o/assets_web%2FXeco(1).svg?alt=media&amp;token=c0845173-511a-4ace-9c2d-a89d9a83ada2`,
+        property: "og:image",
       },
     ]);
   }

@@ -18,15 +18,7 @@ export class ProdutoDetalhe implements OnInit {
     public router: Router,
     private route: ActivatedRoute,
     private hs: HomeService
-  ) {
-    this.title.setTitle("ProdutoDetalhe - Traveler template");
-    this.meta.addTags([
-      {
-        property: "og:title",
-        content: "ProdutoDetalhe - Traveler template",
-      },
-    ]);
-  }
+  ) {}
   ngOnInit(): void {
     this.route.queryParamMap.subscribe((p) => {
       this.query = p.get("p");
@@ -116,6 +108,14 @@ export class ProdutoDetalhe implements OnInit {
         content: `${image}`,
         name: "twitter:image",
       });
+
+      this.title.setTitle(`Xeco - ${this.produto.name}`);
+      this.meta.addTags([
+        {
+          property: "og:title",
+          content: `Xeco - ${this.produto.name}`,
+        },
+      ]);
     }, 1000);
   }
 }
